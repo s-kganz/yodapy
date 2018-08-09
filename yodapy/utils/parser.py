@@ -35,7 +35,7 @@ def get_nc_urls(thredds_url, download=False):
                             urljoin(service_el.attrib['base'],
                                     el.attrib['urlPath'])) for el in dataset_el]  # noqa
 
-    return dataset_urls
+    return sorted(dataset_urls)
 
 
 def unix_time_millis(dt):
